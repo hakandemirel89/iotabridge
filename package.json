@@ -1,0 +1,29 @@
+{
+  "name": "@1hive-connext/monorepo",
+  "version": "1.0.0",
+  "keywords": [
+    "ethereum",
+    "react",
+    "workspaces",
+    "yarn"
+  ],
+  "private": true,
+  "scripts": {
+    "react-app:build": "yarn workspace @1hive-connext/react-app build",
+    "react-app:eject": "yarn workspace @1hive-connext/react-app eject",
+    "react-app:ipfs": "yarn workspace @1hive-connext/react-app ipfs",
+    "react-app:lint": "yarn workspace @1hive-connext/react-app lint",
+    "react-app:start": "yarn workspace @1hive-connext/react-app start",
+    "react-app:test": "yarn workspace @1hive-connext/react-app test",
+    "react-app:deploy": "yarn workspace @1hive-connext/react-app build && firebase deploy"
+  },
+  "workspaces": {
+    "nohoist": [
+      "**/@graphprotocol/graph-ts",
+      "**/@graphprotocol/graph-ts/**"
+    ],
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
